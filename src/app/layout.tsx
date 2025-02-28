@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
+import LayoutComponent from "@/components/LayoutComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +29,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
       <body
@@ -51,12 +54,8 @@ export default function RootLayout({
                   Signup
                 </li>
               </ul>
-            <div className=" flex flex-row justify-between items-center w-1/3">
-              <input className=" px-4 py-2 bg-[#F5F5F5] " width={150} placeholder="What are you looking for ? " />
-              <Image src="/icons/searsh.svg" alt="searsh-icon" height={32} width={32} />
-              <Image src="/icons/cart.svg" alt="cart-icon" height={32} width={32} />
-              <Image src="/icons/Wishlist.svg" alt="Wishlist-icon" height={32} width={32} />
-            </div>
+              <LayoutComponent />
+
           </div>
         </div>
         <main className=" pt-24">
