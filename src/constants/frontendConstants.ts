@@ -1,0 +1,1 @@
+export const SCROLL_AMOUNT_PER_DEVICES = 300;
